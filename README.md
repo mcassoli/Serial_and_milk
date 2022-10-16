@@ -29,4 +29,4 @@ button-LED-serial-serial-eg:
 	Demo code from class presentation.
 
 Arduino Files:
-	contians sketches for Arduinos, and circuit diagram
+	contains sketches for Arduinos, and circuit diagram
