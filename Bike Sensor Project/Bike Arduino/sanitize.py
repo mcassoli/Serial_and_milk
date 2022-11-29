@@ -25,54 +25,49 @@
 #       rack dump window is classified for each bay
 #       classifier results sent to rack object via update_rack
 
+from ESP_BT_Handler import *
+from Rack import *
+#import Rack as Rack
+import re
+
+rack = None
+
+def load_classifier_data():
+    pass
+
+def rack_init(rack_map_data):
+    rack = Rack()
+    
+
 def sanitize(rack_map_data, port_baud_list=None):
-    def load_classifier_data():
-        pass
-    
-    def rack_map_init(rack_map_data):
-        pass
-    
     def parse_line(line):
-        # leaning towards lark vs ply based on
-        #   https://wiki.python.org/moin/LanguageParsing
-        #     "LALR(1) for speed or Earley parser for any context-free grammar."
-        #   https://tomassetti.me/parsing-in-python/
-        #     "This means that they are clean and readable, but also that you have to traverse the resulting tree yourself"
-        #   https://python.libhunt.com/compare-lark-vs-ply
-        #     "Compare Lark and PLY's popularity and activity"
-        #   https://github.com/lark-parser/lark
-        #     "Generate a stand-alone parser (for LALR(1) grammars)"
-        #     "Comparison to other libraries"
-        #   https://news.ycombinator.com/item?id=28259458
-        #     "by far the easiest parser generator I've ever used"
         pass
     
     def grammar_is_good(ast):
         pass
    
-    def classify_and_push(ast):
+    def classify(ast):
+        ''' return t/f '''
+        #return the_dict
+    
+    def push_to_rack(the_dict):
+        rack.update(the_dict)
         pass
     
     def port_listnener(port):
-        # does not return => lives in own thread
-        while True:
-            line = port.readline()
-            ast = parse_line(line)
-            if grammar_is_good(ast):
-                classify_and_push(ast)
+        get_messages(port = 7)  ##### udpate port if necessary (unlikely)
+        ast = parse_line(line)
+        if grammar_is_good(ast):
+            the_dict = classify(ast)
+            push_to_rack(the_dict)
     
-    def ports_init(port_baud_list):
-        # maybe serial.tools.list_ports.comports()
-        # maybe adjust datarate on each port until see grammar_is_good
-        # no writing to ports!
-        # timeout for dead ports
-        # create port_listnener thread for each port with meaningful data
-        # each port_listnener does not return => lives in own thread
-        pass
-    
+    port_listener()
+
+def supervise():
     load_classifier_data()
-    rack_map_init(rack_map_data)
-    ports_init(port_baud_list)
-    # return so that other things can happen; e.g., other initialization, flask stuff, ...
-    return
+    rack_init(rack_map_data)
+    while True:
+        sanitize()
   
+if __name__ == '__main__':
+    supervise()
