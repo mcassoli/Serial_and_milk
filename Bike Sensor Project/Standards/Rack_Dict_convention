@@ -1,0 +1,7 @@
+Eg_dict = {0 : True, 1: False, 2 : True, 3 : True, 4 : False}
+
+#Start counting at 0
+#do not skip numbers
+#value is True or False only
+#These dicts are in the Rack object
+#This whole dict is passed as an argument in Rack.update_rack(new_dict)
