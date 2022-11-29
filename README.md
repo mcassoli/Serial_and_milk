@@ -26,8 +26,14 @@ Requires being logged in with @Utexas email account
 
 <b>CONTENT:</b>
 
-button-LED-serial-serial-eg:
-	Demo code from class presentation.
+Bike Sensor Project:
+Our Semesester Project
 
-Arduino Files:
-	contains sketches for Arduinos, and circuit diagram
+Lightning Talk - Serial:
+Resources related to our lightning talk on the serial python library
+
+	button-LED-serial-serial-eg:
+		Demo code from class presentation.
+
+	Arduino Files:
+		contains sketches for Arduinos, and circuit diagram
