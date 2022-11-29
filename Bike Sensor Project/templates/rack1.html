@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta http-equiv="refresh" content="30">
+</head>
+  <hr>
+  <h1>Welcome! This site host the Current status of Rack 1!</h1>
+  <hr />
+  <ul>
+    
+    
+   <table border = 1>
+        <tr>
+            {% for bays in headings %}
+            <th>{{bays}} </th>
+            {% endfor %}
+        </tr>
+        
+        <tr>
+            {% for status in data%}
+            <td> {{status}} </td>
+            
+            {% endfor %}
+        </tr>
+        
+        </tr>
+    <table>
+  </ul>
+  
+  
+  <br />
+</html>
