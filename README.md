@@ -12,9 +12,10 @@ Any copyright arising from original work in this repository is the combined owne
 	John	Maweu
 	Enrique	Velasquez Morquecho
 
+<b>Bike sensor project presentation slides:</b>
+https://docs.google.com/presentation/d/1ecF_Bn3KfwUfmLmnrA_vp8SFRSO8M4qUiGO0ULjh6y4/edit#slide=id.p4
 
-
-<b>Presentation slides:</b>
+<b>Lightning talk presentation slides:</b>
 
 https://docs.google.com/presentation/d/1XnmIbGesfk6mNql1j_q-27OM4iBz_Apz6VVXsv9wHI4/edit?usp=sharing
 
