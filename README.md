@@ -35,5 +35,5 @@ Resources related to our lightning talk on the serial python library
 	button-LED-serial-serial-eg:
 		Demo code from class presentation.
 
-	Arduino Files:
+	Serial talk Arduino Files:
 		contains sketches for Arduinos, and circuit diagram
